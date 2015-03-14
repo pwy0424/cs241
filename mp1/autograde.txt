@@ -1,0 +1,706 @@
+== CS 241 Autograder Note: ==
+This autograder is a preliminary assessment of your program's correctness. Your
+grade may change UP OR DOWN based on the CORRECTNESS OF YOUR PROGRAM. We make every effort to ensure
+that our autograder is 'smart' enough to not count off for simple things like grammar but, in doing so,
+we may inadvertently allow for incorrect code to be counted as correct. If we have to change our script
+to better reflect the CORRECTNESS OF YOUR PROGRAM, we will run the script on EVERY PROGRAM and update
+EVERY AUTOGRADER OUTPUT to ensure fairness to all students. Thanks for understanding! - CS 241 Staff
+
+(Please note, this autograder does not reflect a late submission penalty. This will be applied on Compass.)
+
+
+=== MP1 Autograder Summary ===
+Program Execution Score (90% weight): 27.0/27.0 (100.0%)
+Program Heap Freed (5% weight): PASSED (100%)
+Correct Memory Usage (5% weight): PASSED (100%)
+
+
+=== MP1 Scoring Breakdown ===
+--- Details for "MP1" ---
+Total "MP1" Sub-Score: 27.0
+	... Details for "MP1", "Did the program print out the 10 "Illinois" lines in part1.c?"...
+	Total "MP1", "Did the program print out the 10 "Illinois" lines in part1.c?" Sub-Score: 5.0
+		A total of 10 lines were printed! You were given 5.0 points, out of 5 possible points (0.5 points /test case).
+	... Details for "MP1", "Does libdictionary allow for a successful _init() and _destroy()?"...
+	Total "MP1", "Does libdictionary allow for a successful _init() and _destroy()?" Sub-Score: 2.0
+		GOOD: Your program did not crash!
+	... Details for "MP1", "Does libdictionary allow for a simple _add()?"...
+	Total "MP1", "Does libdictionary allow for a simple _add()?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary allow for an _add() and a _get()?"...
+	Total "MP1", "Does libdictionary allow for an _add() and a _get()?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary allow for a very long _add() and _get()?"...
+	Total "MP1", "Does libdictionary allow for a very long _add() and _get()?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary NOT copy the string in _add()?"...
+	Total "MP1", "Does libdictionary NOT copy the string in _add()?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary _parse() the input we gave in the README correctly?"...
+	Total "MP1", "Does libdictionary _parse() the input we gave in the README correctly?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary handle multiple instances of the dictionary correctly?"...
+	Total "MP1", "Does libdictionary handle multiple instances of the dictionary correctly?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary handle _remove() of an empty dictionary? (The key would not exist, should return non-zero, but shouldn't crash.)"...
+	Total "MP1", "Does libdictionary handle _remove() of an empty dictionary? (The key would not exist, should return non-zero, but shouldn't crash.)" Sub-Score: 4.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary handle the part2.c provided for you for testing?"...
+	Total "MP1", "Does libdictionary handle the part2.c provided for you for testing?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+	... Details for "MP1", "Does libdictionary handle the parse correctly by NOT copying the string?"...
+	Total "MP1", "Does libdictionary handle the parse correctly by NOT copying the string?" Sub-Score: 2.0
+		GOOD: Your program did not crash and gave the expected result!
+
+
+
+
+=== MP1 Raw Autograder Log ===
+[config]: Initializing the AssignmentGrader class "mp1"...
+[config]: Initializing the SegmentGrader class "mp1_1". Loading...
+[config]: Assignment initalization complete!
+[info]: The submission in "../../svn/cs241/pan30" for assignment "mp1" is ready to be graded. Running grading tasks...
+[info]: Beginning to grade assignment "MP1"...
+[fine]: Launching assignment-specific code for "MP1", "MP1"...
+[finer]: Running command [make] with a timeout of 60000ms.
+[finer]: Completed execution of "make" with exit code = 0.
+[finest]: [stdout:1]: gcc -c -W -Wall -g -I. part1.c -o part1.o
+[finest]: [stdout:2]: gcc -c -W -Wall -g -I. mp1-functions.c -o mp1-functions.o
+[finest]: [stdout:3]: gcc part1.o mp1-functions.o -o part1
+[finest]: [stdout:4]: gcc -c -W -Wall -g -I. part2-1.c -o part2-1.o
+[finest]: [stdout:5]: gcc -c -W -Wall -g -I. libdictionary/libdictionary.c -o libdictionary/libdictionary.o
+[finest]: [stdout:6]: gcc part2-1.o libdictionary/libdictionary.o -o part2-1
+[finest]: [stdout:7]: gcc -c -W -Wall -g -I. part2-2.c -o part2-2.o
+[finest]: [stdout:8]: gcc part2-2.o libdictionary/libdictionary.o -o part2-2
+[finest]: [stdout:9]: gcc -c -W -Wall -g -I. part2-3.c -o part2-3.o
+[finest]: [stdout:10]: gcc part2-3.o libdictionary/libdictionary.o -o part2-3
+[finest]: [stdout:11]: gcc -c -W -Wall -g -I. part2-4.c -o part2-4.o
+[finest]: [stdout:12]: gcc part2-4.o libdictionary/libdictionary.o -o part2-4
+[finest]: [stdout:13]: gcc -c -W -Wall -g -I. part2-5.c -o part2-5.o
+[finest]: [stdout:14]: gcc part2-5.o libdictionary/libdictionary.o -o part2-5
+[finest]: [stdout:15]: gcc -c -W -Wall -g -I. part2-6.c -o part2-6.o
+[finest]: [stdout:16]: gcc part2-6.o libdictionary/libdictionary.o -o part2-6
+[finest]: [stdout:17]: gcc -c -W -Wall -g -I. part2-7.c -o part2-7.o
+[finest]: [stdout:18]: gcc part2-7.o libdictionary/libdictionary.o -o part2-7
+[finest]: [stdout:19]: gcc -c -W -Wall -g -I. part2-8.c -o part2-8.o
+[finest]: [stdout:20]: gcc part2-8.o libdictionary/libdictionary.o -o part2-8
+[finest]: [stdout:21]: gcc -c -W -Wall -g -I. part2-9.c -o part2-9.o
+[finest]: [stdout:22]: gcc part2-9.o libdictionary/libdictionary.o -o part2-9
+[finest]: [stdout:23]: gcc -c -W -Wall -g -I. part2-10.c -o part2-10.o
+[finest]: [stdout:24]: gcc part2-10.o libdictionary/libdictionary.o -o part2-10
+[finest]: [stdout:25]: gcc -c -W -Wall -g -I. part2-11.c -o part2-11.o
+[finest]: [stdout:26]: gcc part2-11.o libdictionary/libdictionary.o -o part2-11
+[finest]: [stderr:1]: part2-1.c: In function âmainâ:
+[finest]: [stderr:2]: part2-1.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:3]: part2-1.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:4]: part2-2.c: In function âmainâ:
+[finest]: [stderr:5]: part2-2.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:6]: part2-2.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:7]: part2-3.c: In function âmainâ:
+[finest]: [stderr:8]: part2-3.c:24: warning: initialization discards qualifiers from pointer target type
+[finest]: [stderr:9]: part2-3.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:10]: part2-3.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:11]: part2-4.c: In function âmainâ:
+[finest]: [stderr:12]: part2-4.c:28: warning: initialization discards qualifiers from pointer target type
+[finest]: [stderr:13]: part2-4.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:14]: part2-4.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:15]: part2-5.c: In function âmainâ:
+[finest]: [stderr:16]: part2-5.c:28: warning: initialization discards qualifiers from pointer target type
+[finest]: [stderr:17]: part2-5.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:18]: part2-5.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:19]: part2-6.c: In function âmainâ:
+[finest]: [stderr:20]: part2-6.c:18: warning: unused variable âsâ
+[finest]: [stderr:21]: part2-6.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:22]: part2-6.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:23]: part2-7.c: In function âmainâ:
+[finest]: [stderr:24]: part2-7.c:20: warning: unused variable âsâ
+[finest]: [stderr:25]: part2-7.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:26]: part2-7.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:27]: part2-8.c: In function âmainâ:
+[finest]: [stderr:28]: part2-8.c:12: warning: unused parameter âargcâ
+[finest]: [stderr:29]: part2-8.c:12: warning: unused parameter âargvâ
+[finest]: [stderr:30]: part2-10.c: In function âmainâ:
+[finest]: [stderr:31]: part2-10.c:25: warning: initialization discards qualifiers from pointer target type
+[finest]: [stderr:32]: part2-11.c: In function âmainâ:
+[finest]: [stderr:33]: part2-11.c:31: warning: initialization discards qualifiers from pointer target type
+[fine]: Launching segment-specific code for "MP1", "MP1", "MP1"...
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Did the program print out the 10 "Illinois" lines in part1.c?"...
+[finer]: Running command [mp1-autograde/part1] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part1" with exit code = 0.
+[finest]: [stdout:1]: 1: yay
+[finest]: [stdout:2]: 2: yay
+[finest]: [stdout:3]: 3: yay
+[finest]: [stdout:4]: 4: yay
+[finest]: [stdout:5]: 5: yay
+[finest]: [stdout:6]: 6: yay
+[finest]: [stdout:7]: 7: yay
+[finest]: [stdout:8]: 9: yay
+[finest]: [stdout:9]: 11: yay
+[finest]: [stdout:10]: 12: yay
+[finer]: Testing for string "1: yay" in process output.
+[finer]: String found in line 1 of standard output.
+[finer]: Testing for string "2: yay" in process output.
+[finer]: String found in line 2 of standard output.
+[finer]: Testing for string "3: yay" in process output.
+[finer]: String found in line 3 of standard output.
+[finer]: Testing for string "4: yay" in process output.
+[finer]: String found in line 4 of standard output.
+[finer]: Testing for string "5: yay" in process output.
+[finer]: String found in line 5 of standard output.
+[finer]: Testing for string "6: yay" in process output.
+[finer]: String found in line 6 of standard output.
+[finer]: Testing for string "7: yay" in process output.
+[finer]: String found in line 7 of standard output.
+[finer]: Testing for string "8: yay" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "9: yay" in process output.
+[finer]: String found in line 8 of standard output.
+[finer]: Testing for string "10: yay" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "11: yay" in process output.
+[finer]: String found in line 9 of standard output.
+[finer]: Testing for string "12: yay" in process output.
+[finer]: String found in line 10 of standard output.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary allow for a successful _init() and _destroy()?"...
+[finer]: Running command [mp1-autograde/part2-1] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-1" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary allow for a simple _add()?"...
+[finer]: Running command [mp1-autograde/part2-2] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-2" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary allow for an _add() and a _get()?"...
+[finer]: Running command [mp1-autograde/part2-3] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-3" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary allow for a very long _add() and _get()?"...
+[finer]: Running command [mp1-autograde/part2-4] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-4" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary NOT copy the string in _add()?"...
+[finer]: Running command [mp1-autograde/part2-5] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-5" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary _parse() the input we gave in the README correctly?"...
+[finer]: Running command [mp1-autograde/part2-6] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-6" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary handle multiple instances of the dictionary correctly?"...
+[finer]: Running command [mp1-autograde/part2-7] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-7" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary handle _remove() of an empty dictionary? (The key would not exist, should return non-zero, but shouldn't crash.)"...
+[finer]: Running command [mp1-autograde/part2-8] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-8" with exit code = 10.
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary handle the part2.c provided for you for testing?"...
+[finer]: Running command [mp1-autograde/part2-9] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-9" with exit code = 10.
+[finest]: [stdout:1]: _add(): OKAY!
+[finest]: [stdout:2]: _add(): OKAY!
+[finest]: [stdout:3]: _add(): OKAY!
+[finest]: [stdout:4]: _add(): OKAY!
+[finest]: [stdout:5]: _get(): OKAY!
+[finest]: [stdout:6]: _get(): OKAY!
+[finest]: [stdout:7]: _parse(): OKAY!
+[finest]: [stdout:8]: _parse(): OKAY!
+[finest]: [stdout:9]: _get(): OKAY!
+[fine]: Launching element-specific code for "MP1", "MP1", "MP1", "Does libdictionary handle the parse correctly by NOT copying the string?"...
+[finer]: Running command [mp1-autograde/part2-10] with a timeout of 5000ms.
+[finer]: Completed execution of "mp1-autograde/part2-10" with exit code = 10.
+[fine]: Launching memory grader code for "MP1"...
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part1] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: 1: yay
+[finest]: [stdout:2]: 2: yay
+[finest]: [stdout:3]: 3: yay
+[finest]: [stdout:4]: 4: yay
+[finest]: [stdout:5]: 5: yay
+[finest]: [stdout:6]: 6: yay
+[finest]: [stdout:7]: 7: yay
+[finest]: [stdout:8]: 9: yay
+[finest]: [stdout:9]: 11: yay
+[finest]: [stdout:10]: 12: yay
+[finest]: [stderr:1]: ==15490== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15490== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15490== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15490== Command: mp1-autograde/part1
+[finest]: [stderr:5]: ==15490== 
+[finest]: [stderr:6]: ==15490== 
+[finest]: [stderr:7]: ==15490== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15490==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15490==   total heap usage: 10 allocs, 10 frees, 35 bytes allocated
+[finest]: [stderr:10]: ==15490== 
+[finest]: [stderr:11]: ==15490== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15490== 
+[finest]: [stderr:13]: ==15490== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15490== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-1] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15495== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15495== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15495== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15495== Command: mp1-autograde/part2-1
+[finest]: [stderr:5]: ==15495== 
+[finest]: [stderr:6]: ==15495== 
+[finest]: [stderr:7]: ==15495== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15495==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15495==   total heap usage: 1 allocs, 1 frees, 24 bytes allocated
+[finest]: [stderr:10]: ==15495== 
+[finest]: [stderr:11]: ==15495== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15495== 
+[finest]: [stderr:13]: ==15495== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15495== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-2] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15503== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15503== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15503== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15503== Command: mp1-autograde/part2-2
+[finest]: [stderr:5]: ==15503== 
+[finest]: [stderr:6]: ==15503== 
+[finest]: [stderr:7]: ==15503== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15503==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15503==   total heap usage: 2 allocs, 2 frees, 48 bytes allocated
+[finest]: [stderr:10]: ==15503== 
+[finest]: [stderr:11]: ==15503== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15503== 
+[finest]: [stderr:13]: ==15503== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15503== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-3] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15508== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15508== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15508== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15508== Command: mp1-autograde/part2-3
+[finest]: [stderr:5]: ==15508== 
+[finest]: [stderr:6]: ==15508== 
+[finest]: [stderr:7]: ==15508== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15508==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15508==   total heap usage: 2 allocs, 2 frees, 48 bytes allocated
+[finest]: [stderr:10]: ==15508== 
+[finest]: [stderr:11]: ==15508== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15508== 
+[finest]: [stderr:13]: ==15508== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15508== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-4] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15513== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15513== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15513== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15513== Command: mp1-autograde/part2-4
+[finest]: [stderr:5]: ==15513== 
+[finest]: [stderr:6]: ==15513== 
+[finest]: [stderr:7]: ==15513== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15513==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15513==   total heap usage: 3 allocs, 3 frees, 1,048,624 bytes allocated
+[finest]: [stderr:10]: ==15513== 
+[finest]: [stderr:11]: ==15513== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15513== 
+[finest]: [stderr:13]: ==15513== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15513== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-5] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15519== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15519== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15519== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15519== Command: mp1-autograde/part2-5
+[finest]: [stderr:5]: ==15519== 
+[finest]: [stderr:6]: ==15519== 
+[finest]: [stderr:7]: ==15519== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15519==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15519==   total heap usage: 3 allocs, 3 frees, 1,048,624 bytes allocated
+[finest]: [stderr:10]: ==15519== 
+[finest]: [stderr:11]: ==15519== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15519== 
+[finest]: [stderr:13]: ==15519== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15519== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-6] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15524== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15524== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15524== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15524== Command: mp1-autograde/part2-6
+[finest]: [stderr:5]: ==15524== 
+[finest]: [stderr:6]: ==15524== 
+[finest]: [stderr:7]: ==15524== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15524==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15524==   total heap usage: 16 allocs, 16 frees, 1,068 bytes allocated
+[finest]: [stderr:10]: ==15524== 
+[finest]: [stderr:11]: ==15524== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15524== 
+[finest]: [stderr:13]: ==15524== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15524== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-7] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15529== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15529== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15529== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15529== Command: mp1-autograde/part2-7
+[finest]: [stderr:5]: ==15529== 
+[finest]: [stderr:6]: ==15529== 
+[finest]: [stderr:7]: ==15529== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15529==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15529==   total heap usage: 19 allocs, 19 frees, 1,216 bytes allocated
+[finest]: [stderr:10]: ==15529== 
+[finest]: [stderr:11]: ==15529== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15529== 
+[finest]: [stderr:13]: ==15529== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15529== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-8] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15535== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15535== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15535== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15535== Command: mp1-autograde/part2-8
+[finest]: [stderr:5]: ==15535== 
+[finest]: [stderr:6]: ==15535== 
+[finest]: [stderr:7]: ==15535== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15535==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15535==   total heap usage: 1 allocs, 1 frees, 24 bytes allocated
+[finest]: [stderr:10]: ==15535== 
+[finest]: [stderr:11]: ==15535== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15535== 
+[finest]: [stderr:13]: ==15535== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15535== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-9] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stdout:1]: _add(): OKAY!
+[finest]: [stdout:2]: _add(): OKAY!
+[finest]: [stdout:3]: _add(): OKAY!
+[finest]: [stdout:4]: _add(): OKAY!
+[finest]: [stdout:5]: _get(): OKAY!
+[finest]: [stdout:6]: _get(): OKAY!
+[finest]: [stdout:7]: _parse(): OKAY!
+[finest]: [stdout:8]: _parse(): OKAY!
+[finest]: [stdout:9]: _get(): OKAY!
+[finest]: [stderr:1]: ==15540== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15540== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15540== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15540== Command: mp1-autograde/part2-9
+[finest]: [stderr:5]: ==15540== 
+[finest]: [stderr:6]: ==15540== 
+[finest]: [stderr:7]: ==15540== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15540==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15540==   total heap usage: 7 allocs, 7 frees, 320 bytes allocated
+[finest]: [stderr:10]: ==15540== 
+[finest]: [stderr:11]: ==15540== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15540== 
+[finest]: [stderr:13]: ==15540== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15540== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-10] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15545== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15545== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15545== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15545== Command: mp1-autograde/part2-10
+[finest]: [stderr:5]: ==15545== 
+[finest]: [stderr:6]: ==15545== 
+[finest]: [stderr:7]: ==15545== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15545==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15545==   total heap usage: 3 allocs, 3 frees, 148 bytes allocated
+[finest]: [stderr:10]: ==15545== 
+[finest]: [stderr:11]: ==15545== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15545== 
+[finest]: [stderr:13]: ==15545== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15545== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "All heap blocks were freed -- no leaks are possible" in process output.
+[finer]: String found in line 11 of standard error.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[finer]: Testing for string "pthread" in process output.
+[finer]: String was not found in process output.
+[fine]: Launching memory grader code for "MP1"...
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part1] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 0.
+[finest]: [stdout:1]: 1: yay
+[finest]: [stdout:2]: 2: yay
+[finest]: [stdout:3]: 3: yay
+[finest]: [stdout:4]: 4: yay
+[finest]: [stdout:5]: 5: yay
+[finest]: [stdout:6]: 6: yay
+[finest]: [stdout:7]: 7: yay
+[finest]: [stdout:8]: 9: yay
+[finest]: [stdout:9]: 11: yay
+[finest]: [stdout:10]: 12: yay
+[finest]: [stderr:1]: ==15551== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15551== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15551== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15551== Command: mp1-autograde/part1
+[finest]: [stderr:5]: ==15551== 
+[finest]: [stderr:6]: ==15551== 
+[finest]: [stderr:7]: ==15551== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15551==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15551==   total heap usage: 10 allocs, 10 frees, 35 bytes allocated
+[finest]: [stderr:10]: ==15551== 
+[finest]: [stderr:11]: ==15551== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15551== 
+[finest]: [stderr:13]: ==15551== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15551== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-1] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15556== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15556== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15556== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15556== Command: mp1-autograde/part2-1
+[finest]: [stderr:5]: ==15556== 
+[finest]: [stderr:6]: ==15556== 
+[finest]: [stderr:7]: ==15556== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15556==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15556==   total heap usage: 1 allocs, 1 frees, 24 bytes allocated
+[finest]: [stderr:10]: ==15556== 
+[finest]: [stderr:11]: ==15556== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15556== 
+[finest]: [stderr:13]: ==15556== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15556== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-2] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15561== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15561== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15561== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15561== Command: mp1-autograde/part2-2
+[finest]: [stderr:5]: ==15561== 
+[finest]: [stderr:6]: ==15561== 
+[finest]: [stderr:7]: ==15561== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15561==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15561==   total heap usage: 2 allocs, 2 frees, 48 bytes allocated
+[finest]: [stderr:10]: ==15561== 
+[finest]: [stderr:11]: ==15561== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15561== 
+[finest]: [stderr:13]: ==15561== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15561== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-3] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15569== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15569== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15569== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15569== Command: mp1-autograde/part2-3
+[finest]: [stderr:5]: ==15569== 
+[finest]: [stderr:6]: ==15569== 
+[finest]: [stderr:7]: ==15569== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15569==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15569==   total heap usage: 2 allocs, 2 frees, 48 bytes allocated
+[finest]: [stderr:10]: ==15569== 
+[finest]: [stderr:11]: ==15569== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15569== 
+[finest]: [stderr:13]: ==15569== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15569== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-4] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15574== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15574== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15574== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15574== Command: mp1-autograde/part2-4
+[finest]: [stderr:5]: ==15574== 
+[finest]: [stderr:6]: ==15574== 
+[finest]: [stderr:7]: ==15574== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15574==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15574==   total heap usage: 3 allocs, 3 frees, 1,048,624 bytes allocated
+[finest]: [stderr:10]: ==15574== 
+[finest]: [stderr:11]: ==15574== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15574== 
+[finest]: [stderr:13]: ==15574== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15574== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-5] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15579== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15579== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15579== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15579== Command: mp1-autograde/part2-5
+[finest]: [stderr:5]: ==15579== 
+[finest]: [stderr:6]: ==15579== 
+[finest]: [stderr:7]: ==15579== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15579==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15579==   total heap usage: 3 allocs, 3 frees, 1,048,624 bytes allocated
+[finest]: [stderr:10]: ==15579== 
+[finest]: [stderr:11]: ==15579== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15579== 
+[finest]: [stderr:13]: ==15579== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15579== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-6] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15586== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15586== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15586== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15586== Command: mp1-autograde/part2-6
+[finest]: [stderr:5]: ==15586== 
+[finest]: [stderr:6]: ==15586== 
+[finest]: [stderr:7]: ==15586== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15586==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15586==   total heap usage: 16 allocs, 16 frees, 1,068 bytes allocated
+[finest]: [stderr:10]: ==15586== 
+[finest]: [stderr:11]: ==15586== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15586== 
+[finest]: [stderr:13]: ==15586== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15586== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-7] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15591== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15591== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15591== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15591== Command: mp1-autograde/part2-7
+[finest]: [stderr:5]: ==15591== 
+[finest]: [stderr:6]: ==15591== 
+[finest]: [stderr:7]: ==15591== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15591==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15591==   total heap usage: 19 allocs, 19 frees, 1,216 bytes allocated
+[finest]: [stderr:10]: ==15591== 
+[finest]: [stderr:11]: ==15591== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15591== 
+[finest]: [stderr:13]: ==15591== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15591== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-8] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15598== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15598== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15598== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15598== Command: mp1-autograde/part2-8
+[finest]: [stderr:5]: ==15598== 
+[finest]: [stderr:6]: ==15598== 
+[finest]: [stderr:7]: ==15598== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15598==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15598==   total heap usage: 1 allocs, 1 frees, 24 bytes allocated
+[finest]: [stderr:10]: ==15598== 
+[finest]: [stderr:11]: ==15598== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15598== 
+[finest]: [stderr:13]: ==15598== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15598== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-9] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stdout:1]: _add(): OKAY!
+[finest]: [stdout:2]: _add(): OKAY!
+[finest]: [stdout:3]: _add(): OKAY!
+[finest]: [stdout:4]: _add(): OKAY!
+[finest]: [stdout:5]: _get(): OKAY!
+[finest]: [stdout:6]: _get(): OKAY!
+[finest]: [stdout:7]: _parse(): OKAY!
+[finest]: [stdout:8]: _parse(): OKAY!
+[finest]: [stdout:9]: _get(): OKAY!
+[finest]: [stderr:1]: ==15603== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15603== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15603== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15603== Command: mp1-autograde/part2-9
+[finest]: [stderr:5]: ==15603== 
+[finest]: [stderr:6]: ==15603== 
+[finest]: [stderr:7]: ==15603== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15603==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15603==   total heap usage: 7 allocs, 7 frees, 320 bytes allocated
+[finest]: [stderr:10]: ==15603== 
+[finest]: [stderr:11]: ==15603== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15603== 
+[finest]: [stderr:13]: ==15603== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15603== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[finer]: Running command [valgrind --leak-check=full --show-reachable=yes --num-callers=20 --child-silent-after-fork=yes mp1-autograde/part2-10] with a timeout of 30000ms.
+[finer]: Completed execution of "valgrind" with exit code = 10.
+[finest]: [stderr:1]: ==15608== Memcheck, a memory error detector
+[finest]: [stderr:2]: ==15608== Copyright (C) 2002-2012, and GNU GPL'd, by Julian Seward et al.
+[finest]: [stderr:3]: ==15608== Using Valgrind-3.8.1 and LibVEX; rerun with -h for copyright info
+[finest]: [stderr:4]: ==15608== Command: mp1-autograde/part2-10
+[finest]: [stderr:5]: ==15608== 
+[finest]: [stderr:6]: ==15608== 
+[finest]: [stderr:7]: ==15608== HEAP SUMMARY:
+[finest]: [stderr:8]: ==15608==     in use at exit: 0 bytes in 0 blocks
+[finest]: [stderr:9]: ==15608==   total heap usage: 3 allocs, 3 frees, 148 bytes allocated
+[finest]: [stderr:10]: ==15608== 
+[finest]: [stderr:11]: ==15608== All heap blocks were freed -- no leaks are possible
+[finest]: [stderr:12]: ==15608== 
+[finest]: [stderr:13]: ==15608== For counts of detected and suppressed errors, rerun with: -v
+[finest]: [stderr:14]: ==15608== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 6 from 6)
+[finer]: Testing for string "ERROR SUMMARY: 0 errors from 0 contexts" in process output.
+[finer]: String found in line 14 of standard error.
+[fine]: The assignment-specific grade() method completed successfully.
+[info]: The submission in "../../svn/cs241/pan30" for assignment "mp1" has finished grading. Running final tasks...
